@@ -6,10 +6,10 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "pergunta 1",
+        enunciado: "A IA no futuro terá papel importante em diagnósticos médicos",
         alternativas: [
-            "alternativa 1",
-            "alternativa 2"
+            "a) Sim, auxiliando médicos na identificação precoce de doenças",
+            "b) Não, será proibida de atuar em qualquer área da saúde"
         ]
     }
     {
