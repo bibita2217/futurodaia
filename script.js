@@ -9,25 +9,44 @@ const perguntas = [
         enunciado: "A IA no futuro terá papel importante em diagnósticos médicos",
         alternativas: [
             "a) Sim, auxiliando médicos na identificação precoce de doenças",
-            "b) Não, será proibida de atuar em qualquer área da saúde"
+            "b) Não, será proibida de atuar em qualquer área da saúde",
         ]
     }
     {
-        enunciado: "pergunta 2",
+        enunciado: "Em relação ao mercado de trabalho, a IA provavelmente vai",
+        alternativas: [
+            "a) Substituir algumas funções, mas também criar novas oportunidades",
+            "b) Eliminar todos os empregos humanos sem exceção",
     ]
 
 }
 {
-    enunciado: "pergunta 2",
+    enunciado: "No futuro, carros autônomos movidos por IA poderão",
     alternativas: [
-        "alternativa 1",
-        "alternativa 2"
+        "a) Reduzir acidentes ao minimizar erros humanos",
+        "b) Tornar o trânsito totalmente caótico e sem controle"
     ]
 }
 {
-    enunciado: "pergunta 3",
+    enunciado: "Sobre a criatividade, a IA será capaz de",
     alternativas: [ 
-        "alternativa 1",
-        "alternativa 2"
+        "a) Auxiliar artistas e escritores na criação de novas ideias",
+        "b) Nunca gerar nada criativo ou útil nesse campo"
     ]
+}
+{
+enunciado: "Quanto à ética, um dos maiores desafios do futuro da IA é",
+    alternativas: [ 
+        "a) Garantir que seja usada de forma justa e responsável",
+        "b) Ignorar completamente regras ou preocupações éticas."
+    ]
+}
+];
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPergunta() {
+    perguntaAtual = perguntas[atual];
+    caixaperguntas.textContent = perguntaAtual.enunciado;
 }
