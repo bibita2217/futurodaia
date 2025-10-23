@@ -45,8 +45,32 @@ enunciado: "Quanto à ética, um dos maiores desafios do futuro da IA é",
 
 let atual = 0;
 let perguntaAtual;
+let histotiaFinal = "";
 
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
     caixaperguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
 }
+
+function mostraAlternativas () {
+  for (const alternativa of perguntaAtual.alternativa) {
+      const botaoAlternativa =document.createElement("button");
+      botaoAlternativas.textContent = alternativa;
+      caixaAlternativas.appendChild(botaoAlternativas);
+
+  }
+}
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    histotiaFinal += afirmacoes + " ";
+    atual++;
+mostraPergunta();
+}
+
+function mostraResultado()  {
+    caixaperguntas.textContent = "Em 2049...";
+    textoResultado.textContent = histotiaFinal;
+    caixaAlternativas.textContent = "";
+}
+mostraPergunta();
